@@ -4,7 +4,7 @@ from PIL import Image
 import tensorflow as tf
 
 # Bildgröße wie beim Training
-IMAGE_SIZE = 150
+IMAGE_SIZE = 64
 
 # Modell laden (GANZES Modell mit Architektur)
 # st.cache_resource, um das Modell nur einmal zu laden
