@@ -34,17 +34,13 @@ if uploaded_file is not None:
     # Ergebnis anzeigen
     st.subheader("🔍 Vorhersageergebnis")
     
-    # Entscheidung treffen, welche Wahrscheinlichkeit als "Sicherheit" angezeigt wird
+    #  Entscheidung treffen, welche Wahrscheinlichkeit als "Sicherheit" angezeigt wird
     if prediction > 0.5:
         # Modell ist sicherer, dass es maligne ist
-        confidence = prediction
-        result_text = "maligner Hautkrebs"
         st.error("⚠️ Achtung: Verdacht auf malignen Hautkrebs. Eine ärztliche Untersuchung wird empfohlen.")
     else:
         # Modell ist sicherer, dass es gutartig ist
-        confidence = 1 - prediction
-        result_text = "gutartiger Befund"
         st.success("✅ Kein Hinweis auf malignen Hautkrebs. Trotzdem regelmäßige Kontrolle empfohlen.")
     
     # Zeigt nur die höchste Wahrscheinlichkeit (Sicherheit) an
-    st.write(f"Das Modell ist sich zu **{confidence:.2%}** sicher, dass es sich um einen **{result_text}** handelt.")
+    # Diese Zeile wurde entfernt, um die Prozentanzeige zu entfernen.
